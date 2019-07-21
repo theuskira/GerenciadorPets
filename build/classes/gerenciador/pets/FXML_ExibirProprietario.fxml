@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane_ListarProprietario" fx:id="apExibirProprietario" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #163e05;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gerenciador.pets.FXML_ExibirProprietarioController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="24.0" layoutY="24.0" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="1280.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="150.0" prefWidth="1280.0">
+                     <children>
+                        <Label fx:id="txtNomeProprietario" alignment="CENTER" contentDisplay="CENTER" text="PROPRIETÁRIO" textAlignment="JUSTIFY" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txtEnderecoProprietario" text="Sem endereço" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Pets" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/edit_color.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <TableView fx:id="tabelaPets" prefHeight="650.0" prefWidth="635.0">
+              <columns>
+                <TableColumn fx:id="colunaPetNome" editable="false" prefWidth="150.0" resizable="false" sortable="false" text="Nome" />
+                <TableColumn fx:id="colunaPetTipo" editable="false" prefWidth="100.0" resizable="false" sortable="false" text="Tipo" />
+                  <TableColumn fx:id="colunaPetRaca" editable="false" prefWidth="100.0" resizable="false" sortable="false" text="Raça" />
+                  <TableColumn fx:id="colunaPetIdade" editable="false" prefWidth="100.0" resizable="false" sortable="false" text="Idade" />
+                  <TableColumn fx:id="colunaPetSexo" editable="false" prefWidth="100.0" resizable="false" sortable="false" text="Sexo" />
+                  <TableColumn fx:id="colunaPetPeso" editable="false" prefWidth="100.0" resizable="false" sortable="false" text="Peso" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="320.0" maxWidth="480.0" minHeight="320.0" minWidth="480.0" prefHeight="320.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gerenciador.pets.FXML_LoginController">
+    <children>
+      <ImageView fitHeight="340.0" fitWidth="490.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@img/login.jpg" />
+         </image>
+      </ImageView>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="240.0">
+         <children>
+            <Label text="Usuário" />
+            <TextField fx:id="txtUsuario">
+               <VBox.margin>
+                  <Insets bottom="16.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Senha" />
+            <PasswordField fx:id="txtSenha">
+               <VBox.margin>
+                  <Insets bottom="16.0" />
+               </VBox.margin>
+            </PasswordField>
+              <Button fx:id="btnEntrar" onAction="#handleButtonAction" text="Entrar">
+               <VBox.margin>
+                  <Insets bottom="16.0" />
+               </VBox.margin></Button>
+            <Label fx:id="txtStatus" textAlignment="CENTER" />
+         </children>
+         <padding>
+            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+         </padding>
+      </VBox>
+      <ImageView fx:id="imgStatus" fitHeight="30.0" fitWidth="30.0" layoutX="280.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0">
+         <image>
+            <Image url="@img/loading.gif" />
+         </image></ImageView>
+    </children>
+</AnchorPane>

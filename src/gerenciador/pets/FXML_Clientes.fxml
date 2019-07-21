@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: #163e05;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gerenciador.pets.FXML_ClientesController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="720.0" prefWidth="1024.0" style="-fx-background-color: #163e05;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane fx:id="apLateral" maxWidth="420.0" minHeight="0.0" minWidth="420.0" prefWidth="420.0">
+               <children>
+                  <VBox fx:id="vBoxLateral" prefHeight="718.0" prefWidth="420.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="420.0">
+                           <children>
+                              <TextField fx:id="txtPesquisaClientes" prefHeight="44.0" prefWidth="365.0" promptText="Pesquisar proprietário">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </TextField>
+                              <ImageView fx:id="btnPesquisaClientes" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#pesquisarClientes" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/search_color.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox fx:id="hBoxAddProprietario" alignment="CENTER" onMouseClicked="#onMouseClicked" prefHeight="50.0" prefWidth="420.0" style="-fx-background-color: #2E8B57; -fx-border-radius: 5; -fx-background-radius: 5;">
+                           <children>
+                              <Label fx:id="txtAddProprietario" onMouseClicked="#onMouseClicked" text="Novo proprietario" textAlignment="JUSTIFY" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="btnAddProprietario" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#onMouseClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/add_color.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TableView fx:id="tabelaClientes" maxWidth="300.0" minWidth="410.0" onMouseClicked="#onMouseClickedTable" prefHeight="660.0" prefWidth="300.0">
+                          <columns>
+                            <TableColumn fx:id="colunaClientesNome" editable="false" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="false" sortable="false" text="Nome" />
+                            <TableColumn fx:id="colunaClientesNumero" editable="false" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" resizable="false" sortable="false" text="Numero" />
+                              <TableColumn fx:id="colunaClientesCPF" editable="false" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" resizable="false" sortable="false" text="CPF" />
+                          </columns>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </AnchorPane>
+          <AnchorPane fx:id="apClientes" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
